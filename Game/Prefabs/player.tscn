@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dwl83onlxmf7l"]
+
+[ext_resource type="Script" uid="uid://dd3d6p3h2sho2" path="res://Game/Scripts/player.gd" id="1_y6xdh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7rnt8"]
+radius = 0.7
+height = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7rnt8"]
+radius = 1.0
+height = 4.0
+
+[node name="Player" type="CharacterBody3D" unique_id=461990686]
+script = ExtResource("1_y6xdh")
+SPEED = 5.0
+JUMP_VELOCITY = 7
+GRAVITY = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=976269430]
+shape = SubResource("CapsuleShape3D_7rnt8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=271367123]
+mesh = SubResource("CapsuleMesh_7rnt8")
+
+[node name="Head" type="Node3D" parent="." unique_id=1818450074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=23637440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5999999, -1.1)

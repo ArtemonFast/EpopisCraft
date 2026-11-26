@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c1tc7b2425i7j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k888k"]
+albedo_color = Color(0.07180875, 0.6944798, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k888k"]
+material = SubResource("StandardMaterial3D_k888k")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k888k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brc23"]
+albedo_color = Color(0.2592854, 0.14495742, 0.007968383, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_24osq"]
+material = SubResource("StandardMaterial3D_brc23")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ckqf"]
+albedo_color = Color(0.42248443, 0.26905316, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_brc23"]
+material = SubResource("StandardMaterial3D_7ckqf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24osq"]
+albedo_color = Color(0.27630895, 0.27630895, 0.27630895, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s4gnq"]
+material = SubResource("StandardMaterial3D_24osq")
+
+[node name="Blocks" type="Node3D" unique_id=231089237]
+
+[node name="Grass" type="MeshInstance3D" parent="." unique_id=1736570906]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("BoxMesh_k888k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass" unique_id=1921293964]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D" unique_id=1470169916]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_k888k")
+
+[node name="OakLog" type="MeshInstance3D" parent="." unique_id=303573292]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("BoxMesh_24osq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="OakLog" unique_id=406839032]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OakLog/StaticBody3D" unique_id=445359309]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_k888k")
+
+[node name="Dirt" type="MeshInstance3D" parent="." unique_id=1015654693]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("BoxMesh_brc23")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dirt" unique_id=36140012]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dirt/StaticBody3D" unique_id=1105859244]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_k888k")
+
+[node name="Stone" type="MeshInstance3D" parent="." unique_id=1421566345]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("BoxMesh_s4gnq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Stone" unique_id=1521988445]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stone/StaticBody3D" unique_id=397465365]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_k888k")
